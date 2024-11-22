@@ -54,6 +54,7 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 Identity-Preserving Text-to-Video Generation.
 
 [![Demo Video of ConsisID](https://github.com/user-attachments/assets/634248f6-1b54-4963-88d6-34fa7263750b)](https://www.youtube.com/watch?v=PhlgC-bI5SQ)
+or you can click <a href="https://github.com/SHYuanBest/shyuanbest_media/raw/refs/heads/main/ConsisID/showcase_videos.mp4">here</a> to watch the video.
 
 ## 👍 Acknowledgement
 
