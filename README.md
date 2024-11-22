@@ -40,7 +40,7 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 > [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/PKU-YuanGroup/MagicTime)  [![github](https://img.shields.io/github/stars/PKU-YuanGroup/MagicTime.svg?style=social)](https://github.com/PKU-YuanGroup/MagicTime) <br>
 >
 > [**ChronoMagic-Bench**](https://arxiv.org/abs/2406.18522) <br>
-> Shenghai Yuan, Jinfa Huang and Yujun Shi etc. <br>
+> Shenghai Yuan, Jinfa Huang and Yongqi Xu etc. <br>
 > [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/PKU-YuanGroup/ChronoMagic-Bench/)  [![github](https://img.shields.io/github/stars/PKU-YuanGroup/ChronoMagic-Bench.svg?style=social)](https://github.com/PKU-YuanGroup/ChronoMagic-Bench/) <br>
 > </p></details>
 
