@@ -12,7 +12,6 @@
 [![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://pku-yuangroup.github.io/ConsisID/) 
 [![Dataset](https://img.shields.io/badge/Dataset-ComingSoon-green)](https://huggingface.co/BestWishYsh/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/ConsisID/blob/main/LICENSE) 
-![GitHub Repo stars](https://img.shields.io/github/stars/PKU-YuanGroup/ConsisID)
 
 </h5>
 
