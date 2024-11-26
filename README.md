@@ -35,7 +35,7 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 > PKU-Yuan Lab and Tuzhan AI etc. <br>
 > [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/PKU-YuanGroup/Open-Sora-Plan)  [![github](https://img.shields.io/github/stars/PKU-YuanGroup/Open-Sora-Plan.svg?style=social)](https://github.com/PKU-YuanGroup/Open-Sora-Plan)  <br>
 >
-> [**MagicTime**](https://github.com/PKU-YuanGroup/MagicTime) <br>
+> [**MagicTime**](https://arxiv.org/abs/2404.05014) <br>
 > Shenghai Yuan, Jinfa Huang and Yujun Shi etc. <br>
 > [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/PKU-YuanGroup/MagicTime)  [![github](https://img.shields.io/github/stars/PKU-YuanGroup/MagicTime.svg?style=social)](https://github.com/PKU-YuanGroup/MagicTime) <br>
 >
