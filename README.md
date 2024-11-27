@@ -1,4 +1,4 @@
-<h2 align="center"> <a href="">Identity-Preserving Text-to-Video Generation by Frequency Decomposition</a></h2>
+<h2 align="center"> <a href="https://arxiv.org/abs/2411.17440">Identity-Preserving Text-to-Video Generation by Frequency Decomposition</a></h2>
 
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.  </h2>
 
@@ -26,7 +26,7 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 
 <br>
 
-<details open><summary>💡 We also have other video generation project that may interest you ✨. </summary><p>
+<details open><summary>💡 We also have other video generation projects that may interest you ✨. </summary><p>
 <!--  may -->
 
 
