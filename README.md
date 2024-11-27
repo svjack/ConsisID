@@ -72,7 +72,15 @@ or you can click <a href="https://github.com/SHYuanBest/shyuanbest_media/raw/ref
 If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil:.
 
 ```BibTeX
-
+@misc{yuan2024identitypreservingtexttovideogenerationfrequency,
+      title={Identity-Preserving Text-to-Video Generation by Frequency Decomposition}, 
+      author={Shenghai Yuan and Jinfa Huang and Xianyi He and Yunyuan Ge and Yujun Shi and Liuhan Chen and Jiebo Luo and Li Yuan},
+      year={2024},
+      eprint={2411.17440},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.17440}, 
+}
 ```
 
 ## 🤝 Contributors
