@@ -48,8 +48,9 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 ## 📣 News
 
 * ⏳⏳⏳ Release the full codes & datasets &  weights.
-* ⏳⏳⏳ Integrate into Diffusers, ComfyUI, Replicate and Jupter-notebook.
-* `[2024.11.27]`  🔥 We release the arXiv paper for ConsisID, and you can click [here](https://arxiv.org/abs/2411.17440) to see more details.
+* ⏳⏳⏳ Integrate into Diffusers, ComfyUI, Replicate and Jupter-Notebook.
+* `[2024.11.27]`  🔥 Due to policy restrictions, we only open-source part of the dataset. You can download it by clicking [here](https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data). And we will release the data processing code in the next few days.
+* `[2024.11.26]`  🔥 We release the arXiv paper for ConsisID, and you can click [here](https://arxiv.org/abs/2411.17440) to see more details.
 * `[2024.11.22]`  🔥 **All codes & datasets** are coming soon! Stay tuned 👀!
 
 ## 😍 Gallery
@@ -93,12 +94,27 @@ pip install -r requirements.txt
 
 ### Download ConsisID
 
+The weights is available at [HuggingFace](https://huggingface.co/BestWishYsh/ConsisID-preview), or you can download it with the following command.
+
 ```bash
-# model hub: https://huggingface.co/BestWishYsh/ConsisID-preview
 # if you are in china mainland, run this first: export HF_ENDPOINT=https://hf-mirror.com
 huggingface-cli download --repo-type model \
 BestWishYsh/ConsisID-preview \
 --local-dir BestWishYsh/ConsisID-preview
+```
+
+Once ready, the weights will be organized in this format:
+
+```
+📦 models/
+├── 📂 face_encoder/
+├── 📂 scheduler/
+├── 📂 text_encoder/
+├── 📂 tokenizer/
+├── 📂 transformer/
+├── 📂 vae/
+├── 📄 configuration.json
+├── 📄 model_index.json
 ```
 
 ## 🗝️ Training
@@ -109,21 +125,49 @@ BestWishYsh/ConsisID-preview \
 coming soon!
 ```
 
+If you want to train a text to image and video generation model. You need to arrange the dataset in this [format](https://github.com/PKU-YuanGroup/ConsisID/tree/main/asserts/demo_train_data/dataname):
+
+```
+📦 datasets/
+├── 📂 captions/
+│   ├── 📄 dataname_1.json
+│   ├── 📄 dataname_2.json
+├── 📂 dataname_1/
+│   ├── 📂 refine_bbox_jsons/
+│   ├── 📂 track_masks_data/
+│   ├── 📂 videos/
+├── 📂 dataname_2/
+│   ├── 📂 refine_bbox_jsons/
+│   ├── 📂 track_masks_data/
+│   ├── 📂 videos/
+├── ...
+├── 📄 total_train_data.txt
+```
+
 #### Video DiT training
 
 Setting hyperparameters
 
-```
-coming soon!
-```
+- environment (e.g., cuda): [deepspeed_configs](https://github.com/PKU-YuanGroup/ConsisID/tree/main/util/deepspeed_configs)
+- training arguments (e.g., batchsize): [train_single_rank.sh](https://github.com/PKU-YuanGroup/ConsisID/blob/main/train_single_rank.sh) or [train_multi_rank.sh](https://github.com/PKU-YuanGroup/ConsisID/blob/main/train_multi_rank.sh)
 
-Then, we run scripts/train.sh.
+Then, we run the following bash to start training:
 
 ```bash
 # For single rank
 bash train_single_rank.sh
 # For multi rank
 bash train_multi_rank.sh
+```
+
+## 🐳 Dataset
+
+We released the subset of the training data used to train ConsisID. The dataset is available at [HuggingFace](https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data), or you can download it with the following command. Some samples can be found on our [Project Page](https://pku-yuangroup.github.io/ConsisID/).
+
+```bash
+huggingface-cli download --repo-type dataset \
+BestWishYsh/ConsisID-preview-Data \
+--local-dir BestWishYsh/ConsisID-preview-Data
 ```
 
 ## 👍 Acknowledgement
