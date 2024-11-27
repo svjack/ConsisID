@@ -6,11 +6,11 @@
 <h5 align="center">
 
 
-[![hf_space](https://img.shields.io/badge/🤗-ComingSoon-blue.svg)](https://huggingface.co/BestWishYsh/)
-[![hf_space](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/BestWishYsh/)
-[![arXiv](https://img.shields.io/badge/Arxiv-ComingSoon-b31b1b.svg?logo=arXiv)]() 
+[![hf_space](https://img.shields.io/badge/🤗-ComingSoon-blue.svg)]([https://huggingface.co/BestWishYsh/](https://huggingface.co/spaces/BestWishYsh/ConsisID-preview-Space))
+[![hf_paper](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/BestWishYsh/)
+[![arXiv](https://img.shields.io/badge/Arxiv-ComingSoon-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2411.17440) 
 [![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://pku-yuangroup.github.io/ConsisID/) 
-[![Dataset](https://img.shields.io/badge/Dataset-ComingSoon-green)](https://huggingface.co/BestWishYsh/)
+[![Dataset](https://img.shields.io/badge/Dataset-ComingSoon-green)](https://huggingface.co/datasets/BestWishYsh/ConsisID-Data)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/ConsisID/blob/main/LICENSE) 
 
 </h5>
