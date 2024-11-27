@@ -1,35 +1,31 @@
-#!/bin/bash
-unset http_proxy
-unset https_proxy
-
 # export CUDA_VISIBLE_DEVICES=0
 export WANDB_MODE="offline"
 # export WANDB_MODE="online"
 
-export MODEL_PATH="/storage/ysh/Code/ID_Consistency/Code/2_offen_codes/ConsisID_ckpt"
-export CONFIG_PATH="/storage/ysh/Code/ID_Consistency/Code/2_offen_codes/ConsisID_ckpt"
+export MODEL_PATH="BestWishYsh/ConsisID-preview"
+export CONFIG_PATH="BestWishYsh/ConsisID-preview"
 export TYPE="i2v"
-export DATASET_PATH="/storage/ysh/Code/ID_Consistency/Code/2_offen_codes/ConsisID/asserts/demo_train_data/merge_train_data.txt"
+export DATASET_PATH="asserts/demo_train_data/merge_train_data.txt"
 export OUTPUT_PATH="consisid_finetune_single_rank"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
-export HF_DATASETS_OFFLINE=1
-export TRANSFORMERS_OFFLINE=1
-export PDSH_RCMD_TYPE=ssh
-# NCCL setting
-export GLOO_SOCKET_IFNAME=bond0
-export NCCL_SOCKET_IFNAME=bond0
-export NCCL_IB_HCA=mlx5_10:1,mlx5_11:1,mlx5_12:1,mlx5_13:1
-export NCCL_IB_GID_INDEX=3
-export NCCL_IB_TC=162
-export NCCL_IB_TIMEOUT=25
-export NCCL_PXN_DISABLE=0
-export NCCL_IB_QPS_PER_CONNECTION=4
-export NCCL_ALGO=Ring
-export OMP_NUM_THREADS=1
-export MKL_NUM_THREADS=1
-export NCCL_IB_RETRY_CNT=32
-export NCCL_ALGO=Tree
+# export HF_DATASETS_OFFLINE=1
+# export TRANSFORMERS_OFFLINE=1
+# export PDSH_RCMD_TYPE=ssh
+# # NCCL setting
+# export GLOO_SOCKET_IFNAME=bond0
+# export NCCL_SOCKET_IFNAME=bond0
+# export NCCL_IB_HCA=mlx5_10:1,mlx5_11:1,mlx5_12:1,mlx5_13:1
+# export NCCL_IB_GID_INDEX=3
+# export NCCL_IB_TC=162
+# export NCCL_IB_TIMEOUT=25
+# export NCCL_PXN_DISABLE=0
+# export NCCL_IB_QPS_PER_CONNECTION=4
+# export NCCL_ALGO=Ring
+# export OMP_NUM_THREADS=1
+# export MKL_NUM_THREADS=1
+# export NCCL_IB_RETRY_CNT=32
+# export NCCL_ALGO=Tree
 
 # if you are not using wth 8 gus, change `accelerate_config_machine_single.yaml` num_processes as your gpu number
 accelerate launch --config_file util/deepspeed_configs/accelerate_config_machine_single.yaml \
@@ -74,7 +70,6 @@ accelerate launch --config_file util/deepspeed_configs/accelerate_config_machine
   --min_distance 3 \
   --min_frames 1 \
   --max_frames 1 \
-  --mask_path "asserts/demo_train_data/dataname" \
   --LFE_num_tokens 32 \
   --LFE_output_dim 768 \
   --LFE_heads 12 \

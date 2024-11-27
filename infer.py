@@ -2,7 +2,6 @@ import os
 import random
 import argparse
 import numpy as np
-from typing import Literal
 from PIL import Image, ImageOps
 
 import torch
@@ -180,7 +179,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate a video from a text prompt using ConsisID")
     
     # ckpt arguments
-    parser.add_argument("--model_path", type=str, default="/storage/ysh/Code/ID_Consistency/Code/2_offen_codes/ConsisID_ckpt", help="The path of the pre-trained model to be used")
+    parser.add_argument("--model_path", type=str, default="BestWishYsh/ConsisID-preview", help="The path of the pre-trained model to be used")
     parser.add_argument("--lora_path", type=str, default=None, help="The path of the LoRA weights to be used")
     parser.add_argument("--lora_rank", type=int, default=128, help="The rank of the LoRA weights")
     

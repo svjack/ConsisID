@@ -591,7 +591,6 @@ class ConsisID_Dataset(Dataset):
             min_distance=3,
             min_frames=1,
             max_frames=5,
-            mask_path=None,
             is_cross_face=False,
             is_reserve_face=False,
     ):  
@@ -610,7 +609,6 @@ class ConsisID_Dataset(Dataset):
             self.min_distance       = min_distance
             self.min_frames         = min_frames
             self.max_frames         = max_frames
-            self.mask_path          = mask_path
             self.is_cross_face      = is_cross_face
             self.is_reserve_face    = is_reserve_face
         

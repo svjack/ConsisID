@@ -23,13 +23,12 @@ from diffusers.models import AutoencoderKLCogVideoX, CogVideoXTransformer3DModel
 from diffusers.models.embeddings import get_3d_rotary_pos_embed
 from diffusers.pipelines.pipeline_utils import DiffusionPipeline
 from diffusers.schedulers import CogVideoXDDIMScheduler, CogVideoXDPMScheduler
-from diffusers.utils import (
-    logging,
-    replace_example_docstring,
-)
+from diffusers.utils import logging, replace_example_docstring
 from diffusers.utils.torch_utils import randn_tensor
 from diffusers.video_processor import VideoProcessor
 from diffusers.pipelines.cogvideo.pipeline_output import CogVideoXPipelineOutput
+
+from models.transformer_consisid import ConsisIDTransformer3DModel
 
 current_file_path = os.path.abspath(__file__)
 project_roots = [os.path.dirname(os.path.dirname(current_file_path))]
@@ -203,8 +202,8 @@ class ConsisIDPipeline(DiffusionPipeline):
         tokenizer (`T5Tokenizer`):
             Tokenizer of class
             [T5Tokenizer](https://huggingface.co/docs/transformers/model_doc/t5#transformers.T5Tokenizer).
-        transformer ([`CogVideoXTransformer3DModel`]):
-            A text conditioned `CogVideoXTransformer3DModel` to denoise the encoded video latents.
+        transformer ([`ConsisIDTransformer3DModel`]):
+            A text conditioned `ConsisIDTransformer3DModel` to denoise the encoded video latents.
         scheduler ([`SchedulerMixin`]):
             A scheduler to be used in combination with `transformer` to denoise the encoded video latents.
     """
@@ -223,7 +222,7 @@ class ConsisIDPipeline(DiffusionPipeline):
         tokenizer: T5Tokenizer,
         text_encoder: T5EncoderModel,
         vae: AutoencoderKLCogVideoX,
-        transformer: CogVideoXTransformer3DModel,
+        transformer: Union[ConsisIDTransformer3DModel, CogVideoXTransformer3DModel],
         scheduler: Union[CogVideoXDDIMScheduler, CogVideoXDPMScheduler],
     ):
         super().__init__()

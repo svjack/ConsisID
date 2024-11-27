@@ -10,7 +10,7 @@
 [![hf_paper](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/BestWishYsh/)
 [![arXiv](https://img.shields.io/badge/Arxiv-2411.17440-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2411.17440) 
 [![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://pku-yuangroup.github.io/ConsisID/) 
-[![Dataset](https://img.shields.io/badge/Dataset-miniData-green)](https://huggingface.co/datasets/BestWishYsh/ConsisID-Data)
+[![Dataset](https://img.shields.io/badge/Dataset-previewData-green)](https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/ConsisID/blob/main/LICENSE) 
 
 </h5>
@@ -47,6 +47,9 @@ This repository is the official implementation of ConsisID, a tuning-free DiT-ba
 
 ## 📣 News
 
+* ⏳⏳⏳ Release the full codes & datasets &  weights.
+* ⏳⏳⏳ Integrate into Diffusers, ComfyUI, Replicate and Jupter-notebook.
+* `[2024.11.27]`  🔥 We release the arXiv paper for ConsisID, and you can click [here](https://arxiv.org/abs/2411.17440) to see more details.
 * `[2024.11.22]`  🔥 **All codes & datasets** are coming soon! Stay tuned 👀!
 
 ## 😍 Gallery
@@ -55,6 +58,73 @@ Identity-Preserving Text-to-Video Generation.
 
 [![Demo Video of ConsisID](https://github.com/user-attachments/assets/634248f6-1b54-4963-88d6-34fa7263750b)](https://www.youtube.com/watch?v=PhlgC-bI5SQ)
 or you can click <a href="https://github.com/SHYuanBest/shyuanbest_media/raw/refs/heads/main/ConsisID/showcase_videos.mp4">here</a> to watch the video.
+
+## 🤗 Demo
+
+### Gradio Web UI
+
+Highly recommend trying out our web demo by the following command, which incorporates all features currently supported by ConsisID. We also provide [online demo](https://huggingface.co/spaces/BestWishYsh/ConsisID-preview-Space) in Hugging Face Spaces.
+
+```bash
+python app.py
+```
+
+### CLI Inference
+
+```bash
+python infer.py --model_path BestWishYsh/ConsisID-preview
+```
+
+warning: It is worth noting that even if we use the same seed and prompt but we change a machine, the results will be different.
+
+## ⚙️ Requirements and Installation
+
+We recommend the requirements as follows.
+
+### Environment
+
+```bash
+git clone --depth=1 https://github.com/PKU-YuanGroup/ConsisID.git
+cd ConsisID
+conda create -n consisid python=3.11.0
+conda activate consisid
+pip install -r requirements.txt
+```
+
+### Download ConsisID
+
+```bash
+# model hub: https://huggingface.co/BestWishYsh/ConsisID-preview
+# if you are in china mainland, run this first: export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --repo-type model \
+BestWishYsh/ConsisID-preview \
+--local-dir BestWishYsh/ConsisID-preview
+```
+
+## 🗝️ Training
+
+#### Data preprocessing
+
+```
+coming soon!
+```
+
+#### Video DiT training
+
+Setting hyperparameters
+
+```
+coming soon!
+```
+
+Then, we run scripts/train.sh.
+
+```bash
+# For single rank
+bash train_single_rank.sh
+# For multi rank
+bash train_multi_rank.sh
+```
 
 ## 👍 Acknowledgement
 

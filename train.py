@@ -654,7 +654,6 @@ def main(args):
         min_distance=args.min_distance,
         min_frames=args.min_frames,
         max_frames=args.max_frames,
-        mask_path=args.mask_path,
         is_cross_face=args.is_cross_face,
         is_reserve_face=args.is_reserve_face
     )
