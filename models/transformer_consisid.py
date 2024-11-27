@@ -644,7 +644,7 @@ class ConsisIDTransformer3DModel(ModelMixin, ConfigMixin, PeftAdapterMixin):
 if __name__ == '__main__':
     device = "cuda:0"
     weight_dtype = torch.bfloat16
-    pretrained_model_name_or_path = "/storage/ysh/Code/ID_Consistency/Code/2_offen_codes/ConsisID_ckpt"
+    pretrained_model_name_or_path = "BestWishYsh/ConsisID-preview"
     
     transformer_additional_kwargs={
         'torch_dtype': weight_dtype,
