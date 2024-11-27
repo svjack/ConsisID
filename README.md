@@ -6,7 +6,7 @@
 <h5 align="center">
 
 
-[![hf_space](https://img.shields.io/badge/🤗-ComingSoon-blue.svg)]([https://huggingface.co/BestWishYsh/](https://huggingface.co/spaces/BestWishYsh/ConsisID-preview-Space))
+[![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://huggingface.co/spaces/BestWishYsh/ConsisID-preview-Space)
 [![hf_paper](https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg)](https://huggingface.co/BestWishYsh/)
 [![arXiv](https://img.shields.io/badge/Arxiv-2411.17440-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2411.17440) 
 [![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://pku-yuangroup.github.io/ConsisID/) 
