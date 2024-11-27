@@ -78,6 +78,17 @@ python infer.py --model_path BestWishYsh/ConsisID-preview
 
 warning: It is worth noting that even if we use the same seed and prompt but we change a machine, the results will be different.
 
+### Prompt Refiner
+
+ConsisID has high requirements for prompt quality. You can use [GPT-4o](https://chatgpt.com/) to refine the input text prompt. The example is as follows (original prompt: "a man is playing guitar.")
+```bash
+a man is playing guitar.
+
+Change the sentence above to something like this (add some facial changes, even if they are minor. Don't make the sentence too long): 
+
+The video features a man standing next to an airplane, engaged in a conversation on his cell phone. he is wearing sunglasses and a black top, and he appears to be talking seriously. The airplane has a green stripe running along its side, and there is a large engine visible behind his. The man seems to be standing near the entrance of the airplane, possibly preparing to board or just having disembarked. The setting suggests that he might be at an airport or a private airfield. The overall atmosphere of the video is professional and focused, with the man's attire and the presence of the airplane indicating a business or travel context.
+```
+
 ## ⚙️ Requirements and Installation
 
 We recommend the requirements as follows.
