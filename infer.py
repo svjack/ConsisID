@@ -129,7 +129,10 @@ def generate_video(
 
     # 3. Enable CPU offload for the model.
     pipe.to(device)
-
+    pipe.enable_sequential_cpu_offload()
+    pipe.vae.enable_slicing()
+    pipe.vae.enable_tiling()
+    
     # process face data
     id_image = np.array(load_image(image=img_file_path).convert("RGB"))
     id_image = resize_numpy_image_long(id_image, 1024)
