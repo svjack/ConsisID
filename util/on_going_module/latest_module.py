@@ -205,3 +205,5 @@ class ConsisIDBlock(nn.Module):
         encoder_hidden_states = encoder_hidden_states + enc_gate_ff * ff_output[:, :text_seq_length]
 
         return hidden_states, encoder_hidden_states
+
+# 3. The third difference is the composition of low-frequency facial features. The current codes does not use kps.
