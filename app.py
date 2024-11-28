@@ -108,10 +108,13 @@ if "variance_type" in pipe.scheduler.config:
 
 pipe.scheduler = CogVideoXDPMScheduler.from_config(pipe.scheduler.config, **scheduler_args)
 pipe.to(device)
-pipe.enable_model_cpu_offload()
-pipe.enable_sequential_cpu_offload()
-pipe.vae.enable_slicing()
-pipe.vae.enable_tiling()
+
+# Enable CPU offload for the model.
+# turn on if you don't have multiple GPUs or enough GPU memory(such as H100) and it will cost more time in inference, it may also reduce the quality
+# pipe.enable_model_cpu_offload()
+# pipe.enable_sequential_cpu_offload()
+# pipe.vae.enable_slicing()
+# pipe.vae.enable_tiling()
 
 os.makedirs("./output", exist_ok=True)
 os.makedirs("./gradio_tmp", exist_ok=True)
