@@ -129,10 +129,12 @@ def generate_video(
 
     # 3. Enable CPU offload for the model.
     pipe.to(device)
-    pipe.enable_model_cpu_offload()
-    pipe.enable_sequential_cpu_offload()
-    pipe.vae.enable_slicing()
-    pipe.vae.enable_tiling()
+
+    # turn on if you don't have multiple GPUs or enough GPU memory(such as H100) and it will cost more time in inference, it may also reduce the quality
+    # pipe.enable_model_cpu_offload()
+    # pipe.enable_sequential_cpu_offload()
+    # pipe.vae.enable_slicing()
+    # pipe.vae.enable_tiling()
     
     # process face data
     id_image = np.array(load_image(image=img_file_path).convert("RGB"))
