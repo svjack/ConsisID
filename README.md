@@ -21,12 +21,33 @@
 This repository is the official implementation of ConsisID, a tuning-free DiT-based controllable IPT2V model to keep human-identity consistent in the generated video. The approach draws inspiration from previous studies on frequency analysis of vision/diffusion transformers.
 </div>
 
+# Installtion
+```bash
+sudo apt-get update && sudo apt-get install git-lfs ffmpeg cbm
+git clone https://huggingface.co/spaces/svjack/ConsisID-preview-Space && cd ConsisID-preview-Space && pip install -r requirements.txt
+```
 
+# Running 
+```bash
+python consisid_preview_script.py 烟绯-.png \
+ "The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge." \
+  --num_inference_steps 50 --guidance_scale 7.0 --seed 42 --output_dir ./girl_output
+```
 
+## I2V Reference Images
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="https://github.com/user-attachments/assets/3bb1126f-fe88-434a-b8e8-f3fb21cbe68c"  style="max-width: 100%;">
+  </div>
 
-
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/e2b54229-17ff-4d8f-8962-c85c17a87bea" style="width: 1024px; height: 800px;"></video>
+</div>
+<p><strong>Prompt:</strong> The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge."
+ </p>
 
 <br>
+
+
 
 <details open><summary>💡 We also have other video generation projects that may interest you ✨. </summary><p>
 <!--  may -->
