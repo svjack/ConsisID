@@ -129,6 +129,7 @@ def generate_video(
 
     # 3. Enable CPU offload for the model.
     pipe.to(device)
+    pipe.enable_model_cpu_offload()
     pipe.enable_sequential_cpu_offload()
     pipe.vae.enable_slicing()
     pipe.vae.enable_tiling()
