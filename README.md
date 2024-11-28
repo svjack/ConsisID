@@ -80,6 +80,19 @@ python infer.py --model_path BestWishYsh/ConsisID-preview
 
 warning: It is worth noting that even if we use the same seed and prompt but we change a machine, the results will be different.
 
+### GPU Memory Optimization
+
+```bash
+# turn on if you don't have multiple GPUs or enough GPU memory(such as H100), but it will cost more time in inference and may also reduce the quality
+pipe.enable_model_cpu_offload()
+pipe.enable_sequential_cpu_offload()
+pipe.vae.enable_slicing()
+pipe.vae.enable_tiling()
+```
+
+warning: It is worth noting that even if we use the same seed and prompt but we change a machine, the results will be different.
+
+
 ### Prompt Refiner
 
 ConsisID has high requirements for prompt quality. You can use [GPT-4o](https://chatgpt.com/) to refine the input text prompt. The example is as follows (original prompt: "a man is playing guitar.")
