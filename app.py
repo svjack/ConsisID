@@ -108,6 +108,7 @@ if "variance_type" in pipe.scheduler.config:
 
 pipe.scheduler = CogVideoXDPMScheduler.from_config(pipe.scheduler.config, **scheduler_args)
 pipe.to(device)
+pipe.enable_model_cpu_offload()
 pipe.enable_sequential_cpu_offload()
 pipe.vae.enable_slicing()
 pipe.vae.enable_tiling()
