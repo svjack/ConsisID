@@ -39,6 +39,12 @@ python consisid_preview_script_offload.py 烟绯-.png \
  "The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge." \
   --num_inference_steps 50 --guidance_scale 7.0 --seed 42 --output_dir ./girl_output
 ```
+- OR
+```bash
+python consisid_preview_script_offload_multi.py 烟绯-.png \
+ "The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge." \
+  --num_inference_steps 50 --guidance_scale 7.0 --seed 42 --output_dir ./girl_output --num_videos 1000
+```
 
 ## I2V Reference Images
   <div style="display: flex; flex-direction: column; align-items: center;">
