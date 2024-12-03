@@ -45,6 +45,12 @@ python consisid_preview_script_offload_multi.py 烟绯-.png \
  "The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge." \
   --num_inference_steps 50 --guidance_scale 7.0 --seed 42 --output_dir ./girl_output --num_videos 1000
 ```
+- OR
+```bash
+python consisid_preview_script_offload_multi.py woman_image.jpg \
+  "The video features a woman with blonde hair standing on a beach near the water's edge. She is wearing a black swimsuit and appears to be enjoying her time by the sea. The sky above is clear with some clouds, and the ocean waves gently lap against the shore. The woman seems to be holding something white in her hand, possibly a piece of driftwood or a small object found on the beach. The overall atmosphere of the video is serene and relaxing, capturing the beauty of nature and the simple pleasure of being by the ocean." \
+   --num_inference_steps 50 --guidance_scale 7.0 --output_dir ./girl_output_multi --num_videos 1000
+```
 
 ## I2V Reference Images
   <div style="display: flex; flex-direction: column; align-items: center;">
@@ -57,8 +63,17 @@ python consisid_preview_script_offload_multi.py 烟绯-.png \
 <p><strong>Prompt:</strong> The video features a girl in a traditional Chinese attire, standing amidst a serene Chinese courtyard. She is adorned with delicate silk robes and intricate embroidery, reflecting the rich cultural heritage. Her serene yet determined gaze hints at quiet resolve, as a gentle breeze catches a loose strand of her hair. She stands in a tranquil courtyard framed by moss-covered stone walls and wooden arches, with cherry blossoms casting soft shadows on the ground. The petals swirl around her, adding a dreamlike quality, while the blurred backdrop emphasizes her poised figure. The scene conveys elegance, strength, and tranquil readiness, capturing a moment of peace before an upcoming challenge."
  </p>
 
-<br>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="https://github.com/user-attachments/assets/375468b9-8775-4cac-b00e-f6ad63bd533e"  style="max-width: 100%;">
+  </div>
 
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/1621fe68-7e3b-4adf-abba-8f9c539f397b" style="width: 1024px; height: 800px;"></video>
+</div>
+<p><strong>Prompt:</strong> The video features a woman with blonde hair standing on a beach near the water's edge. She is wearing a black swimsuit and appears to be enjoying her time by the sea. The sky above is clear with some clouds, and the ocean waves gently lap against the shore. The woman seems to be holding something white in her hand, possibly a piece of driftwood or a small object found on the beach. The overall atmosphere of the video is serene and relaxing, capturing the beauty of nature and the simple pleasure of being by the ocean."
+ </p>
+
+<br>
 
 
 <details open><summary>💡 We also have other video generation projects that may interest you ✨. </summary><p>
